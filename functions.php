@@ -33,4 +33,14 @@ function dire_bonjour(){
 }
 add_action( 'lucas', 'dire_bonjour');
 
+function hook_nocache() {
+ }
+  function hook_javascript() {
+    ?>
+        <script>
+            alert('La page est en cours de chargement');
+        </script>
+    <?php
+}
+add_action('wp_head', 'hook_javascript');
 ?>
